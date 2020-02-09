@@ -1,0 +1,16 @@
+<div *ngIf="!user" class="card text-center">
+  <div>
+    <h4>Non connecté</h4>
+  </div>
+  <div>
+    <button (click)="signInWithGoogle()"><span>Se connecter avec google</span>
+    </button>
+  </div>
+</div>
+<div *ngIf="user">
+  <div>
+    {{user | json }}
+  </div>
+  <button (click)="signOut()"><span>Se déconnecter</span>
+  </button>
+</div>
